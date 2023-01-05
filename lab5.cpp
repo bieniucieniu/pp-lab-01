@@ -15,18 +15,18 @@ namespace cppNewDelete {
     };
 
     //tworzenie pustego słownika
-    NameDict createNameDict(){
+    NameDict createNameDict() {
         NameDict out;
         out.len = 0;
-        out.pNames = new const char*[0];
+        out.pNames = new const char* [0];
         return out;
     }
 
     //tworzenie słownika o podanej długości
-    NameDict createNameDict(int base_len){
+    NameDict createNameDict(int base_len) {
         NameDict out;
         out.len = base_len;
-        out.pNames = new const char*[out.len];
+        out.pNames = new const char* [out.len];
         return out;
     }
 
@@ -147,21 +147,21 @@ namespace cMallocFree {
     };
 
     //tworzenie pustego słownika
-    NameDict createNameDict(){
+    NameDict createNameDict() {
         NameDict out;
         out.len = 0;
-        out.pNames = (const char**) malloc(sizeof(const char*) * out.len);
+        out.pNames = (const char**)malloc(sizeof(const char*) * out.len);
         return out;
     }
 
     //tworzenie słownika o podanej długości
-    NameDict createNameDict(int base_len){
+    NameDict createNameDict(int base_len) {
         NameDict out;
         out.len = base_len;
-        out.pNames = (const char**) malloc(sizeof(const char*) * out.len);
+        out.pNames = (const char**)malloc(sizeof(const char*) * out.len);
         return out;
     }
-    
+
     //dodawanie do słownika nowego imienia wprowadzanego z klawiatury
     void addName(NameDict& dict, const char* name) {
         NameDict new_dict = createNameDict(dict.len + 1);
@@ -271,6 +271,7 @@ namespace cMallocFree {
     }
 
 }
+
 int main() {
     std::cout << "Mikolaj Bien\npon 11:15\n24.10.2022 / 25.10.2022\nnumer albumu: 272950\n\n";
 
